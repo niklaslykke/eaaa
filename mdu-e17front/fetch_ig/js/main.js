@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // accessToken: 'YOUR_ACCESS_TOKEN',
   // userId: 'YOUR_USER_ID',
   let feed = new Instafeed({
-    accessToken: '206887733.1677ed0.45fafbd23f3f44c6858898fd47e2fd61',
-    userId: '206887733',
+    accessToken: '5672009939.1677ed0.0911e5ab253f48ae9240a660a96a776f',
+    userId: '5672009939',
     get: 'user',
     limit: 50,
     mock: true,
