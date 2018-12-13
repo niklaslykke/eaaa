@@ -1,0 +1,27 @@
+"use strict";
+document.addEventListener("DOMContentLoaded", function() {
+  // the DOM is fully loaded
+  console.log("Document ready!");
+
+  fetch('json/persons.json')
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(json) {
+      console.log(json);
+      appendPersons(json.persons);
+    });
+
+  function appendPersons(persons) {
+    for (let i = 0; i < persons.length; i++) {
+      let person = persons[i];
+      console.log(person);
+      document.getElementById('grid-persons').innerHTML += `
+          <article>
+            <h3>${person.name}</h3>
+            <p>${person.age}</p>
+          </article>
+        `;
+    }
+  }
+});
